@@ -19,17 +19,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Surface(
-                color = MaterialTheme.colorScheme.background
+                color = MaterialTheme.colorScheme.background,
             ) {
                 FirstPage(
                     text = "Welcome to The Life Manager!",
                     onClick = {
                         val intent = Intent(this@MainActivity, FeedActivity::class.java)
                         startActivity(intent)
-                    }
+                    },
                 )
             }
         }
     }
 }
-

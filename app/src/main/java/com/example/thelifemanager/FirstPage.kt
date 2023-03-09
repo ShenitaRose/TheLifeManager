@@ -1,6 +1,5 @@
 package com.example.thelifemanager
 
-
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,7 +11,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -20,25 +18,24 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 @Composable
 fun FirstPage(
     text: String,
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .padding(30.dp)
             .fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
-    )  {
-    Text(
-        text = text,
-        fontSize = 50.sp,
-        fontWeight = FontWeight.Bold,
-        modifier = Modifier.padding(16.dp),
-        textAlign = TextAlign.Center,
-    )
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        Text(
+            text = text,
+            fontSize = 50.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(16.dp),
+            textAlign = TextAlign.Center,
+        )
 
         val imageModifier = Modifier
             .size(350.dp)
@@ -47,18 +44,19 @@ fun FirstPage(
             painter = painterResource(id = R.drawable.management),
             contentDescription = "",
             contentScale = ContentScale.Fit,
-            modifier = imageModifier
+            modifier = imageModifier,
         )
 
         Button(
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFdd9fc8)
+                containerColor = Color(0xFFdd9fc8),
             ),
             shape = RoundedCornerShape(10.dp),
-            onClick = onClick
+            onClick = onClick,
         ) { Text(color = Color.White, fontSize = 30.sp, text = "Get Started") }
+    }
 }
-}
+
 @Preview
 @Composable
 fun FirstPagePreview() {

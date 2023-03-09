@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 fun HomeScreen(text: String) {
     Card(
         modifier = Modifier
-            .padding(16.dp)
+            .padding(16.dp),
     ) {
         Text(
             text = text,
