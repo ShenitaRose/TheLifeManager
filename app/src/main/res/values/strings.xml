@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">The Life Manager</string>
+    <string name="title_activity_feed">FeedActivity</string>
+</resources>
