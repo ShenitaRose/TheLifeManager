@@ -1,6 +1,8 @@
 package com.example.thelifemanager
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.*
@@ -30,7 +32,7 @@ fun HomeScreen(text: String) {
                     .weight(weight = 1.0f),
                 textAlign = TextAlign.Left,
 
-            )
+                )
 
             Box(
                 contentAlignment = Alignment.Center,
@@ -67,7 +69,7 @@ fun HomeScreen(text: String) {
                 containerColor = Color(0xFF50e0be),
             ),
 
-        ) {
+            ) {
             Text(
                 text = "Today",
                 color = Color.White,
@@ -84,10 +86,10 @@ fun HomeScreen(text: String) {
                     .padding(20.dp)
                     .fillMaxWidth(),
 
-            )
+                )
         }
 
-        Row() {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 text = "To do",
                 fontSize = 20.sp,
@@ -102,6 +104,32 @@ fun HomeScreen(text: String) {
                     color = Color.White,
                     fontSize = 16.sp,
                     modifier = Modifier.padding(4.dp),
+                )
+            }
+        }
+        LazyRow(verticalAlignment = Alignment.CenterVertically) {
+            item {
+                TodoCard(
+                    todo = "Clean the house",
+                    until = "Till 5pm"
+                )
+            }
+            item {
+                TodoCard(
+                    todo = "Wash the dishes",
+                    until = "Next week"
+                )
+            }
+            item {
+                TodoCard(
+                    todo = "Do the Laundry",
+                    until = "Next month"
+                )
+            }
+            item {
+                TodoCard(
+                    todo = "Take Taty for a walk, very long title",
+                    until = "Never, lol"
                 )
             }
         }
