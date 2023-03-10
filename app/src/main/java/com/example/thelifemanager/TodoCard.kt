@@ -18,11 +18,11 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TodoCard (
+fun TodoCard(
     todo: String,
-    until: String
+    until: String,
 ) {
-    Card (
+    Card(
         modifier = Modifier
             .padding(16.dp)
             .width(130.dp)
@@ -49,7 +49,7 @@ fun TodoCard (
             text = until,
             fontSize = 10.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(5.dp)
+            modifier = Modifier.padding(5.dp),
         )
     }
 }
@@ -57,5 +57,5 @@ fun TodoCard (
 @Preview
 @Composable
 fun TodoCardPreview() {
-    TodoCard(todo = "Daily Tasks", until ="Until 6pm")
+    TodoCard(todo = "Daily Tasks", until = "Until 6pm")
 }

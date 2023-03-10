@@ -32,7 +32,7 @@ fun HomeScreen(text: String) {
                     .weight(weight = 1.0f),
                 textAlign = TextAlign.Left,
 
-                )
+            )
 
             Box(
                 contentAlignment = Alignment.Center,
@@ -69,7 +69,7 @@ fun HomeScreen(text: String) {
                 containerColor = Color(0xFF50e0be),
             ),
 
-            ) {
+        ) {
             Text(
                 text = "Today",
                 color = Color.White,
@@ -86,7 +86,7 @@ fun HomeScreen(text: String) {
                     .padding(20.dp)
                     .fillMaxWidth(),
 
-                )
+            )
         }
 
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -111,25 +111,25 @@ fun HomeScreen(text: String) {
             item {
                 TodoCard(
                     todo = "Clean the house",
-                    until = "Till 5pm"
+                    until = "Till 5pm",
                 )
             }
             item {
                 TodoCard(
                     todo = "Wash the dishes",
-                    until = "Next week"
+                    until = "Next week",
                 )
             }
             item {
                 TodoCard(
                     todo = "Do the Laundry",
-                    until = "Next month"
+                    until = "Next month",
                 )
             }
             item {
                 TodoCard(
                     todo = "Take Taty for a walk, very long title",
-                    until = "Never, lol"
+                    until = "Never, lol",
                 )
             }
         }
