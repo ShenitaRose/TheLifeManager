@@ -89,50 +89,35 @@ fun HomeScreen(text: String) {
             )
         }
 
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = "To do",
-                fontSize = 20.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(16.dp),
-            )
-            Badge(
-                containerColor = Color(0xFF50e0be),
-            ) {
-                Text(
-                    text = "3",
-                    color = Color.White,
-                    fontSize = 16.sp,
-                    modifier = Modifier.padding(4.dp),
-                )
-            }
-        }
+        TaskHeader(text = "To do", count = 3)
         LazyRow(verticalAlignment = Alignment.CenterVertically) {
             item {
                 TodoCard(
-                    todo = "Clean the house",
+                    task = "Clean the house",
                     until = "Till 5pm",
                 )
             }
             item {
                 TodoCard(
-                    todo = "Wash the dishes",
+                    task = "Wash the dishes",
                     until = "Next week",
                 )
             }
             item {
                 TodoCard(
-                    todo = "Do the Laundry",
+                    task = "Do the Laundry",
                     until = "Next month",
                 )
             }
             item {
                 TodoCard(
-                    todo = "Take Taty for a walk, very long title",
+                    category = "Tomas",
+                    task = "Take Taty for a walk, very long title",
                     until = "Never, lol",
                 )
             }
         }
+        TaskHeader(text = "In progress", count = 10)
     }
 }
 
